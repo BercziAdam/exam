@@ -1,14 +1,14 @@
 #include <stdio.h>
 
 /* Pokemon database!
- * You should store the following data in a structure, called "pokemon":
+ * You should store the following data in a structure
  *  - the name of the pokemon (which is shorter than 256 characters)
  *  - the age of the pokemon (in years)
  *  - the strength of the pokemon (between 0.0-10.0)
  *  - the speed of the pokemon (between 0.0-10.0)
  *  - the type of the pokemon (as a custom type, see below)
  *
- * You should store the pokemon type in an enumeration ("pokemon_type"),
+ * You should store the pokemon type in an enumeration
  * the valid types are:
  *  - normal
  *  - fire
