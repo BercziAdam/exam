@@ -14,7 +14,7 @@
 
 # Tasks
 ## 1-3. Complete the following tasks: (~90 mins)
-- [Multiplication table](multiplication/algorithm.c)
+- [Multiplication table](multiplication/multiply.c)
 - [Pokemon](pokemon/pokemon.c)
 - [ADC initialization](ADC/init.c)
 
