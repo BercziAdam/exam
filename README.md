@@ -37,9 +37,19 @@ The MCU clock speed is 16MHz. The SPI control and status registers are in the fo
 ### What do you know about the SPI bus and about it's protocol? (max. 5 sentences) [2p]
 #### Your answer:
 [add your answer here]
+SPI is enabled 6th bit is written 1;
+SPI interrupt is not enabled 7th bit is 0;
+it is on slave mode 4th bit is 0;
+DORD bit is written to one, the LSB of the data word is transmitted first.;
+CPOL is written to zero, SCK is low;
+Clock Phase is 0 :Leading Edge is sample Trailing Edge is Setup;
+
+
+
+
 
 ### How much is the SPI clock frequency? [1p]
-#### Your answer:
+#### Your answer:		fosc/128 = 16/128 [MHz]
 [add your answer here]
 
 ### What is the bit sequence on the MCU's MOSI pin when 0xAA byte is sent via SPI bus? [1p]
