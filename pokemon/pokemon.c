@@ -100,16 +100,15 @@ poketype_t Get_Strongest_Type(pokemon_t *pokemon_array, int length)
 }
 float Get_Maximal_Strength(pokemon_t * pokemon_array, int length, poketype_t type, int type_count)
 {
-    int temp_array;
     for(int i = 0; i < length; i++) {
         if(pokemon_array[i].type == type) {
             for(int k = 0; k < type_count; k++) {
-                temp_array[k]= pokemon_array[i].strength
+
             }
+            return pokemon_array[i].type;
         }
 
     }
-    return
 }
 int main() {
     pokemon_t pokemon_array[] = {
