@@ -89,21 +89,23 @@ int Get_Type_Count(pokemon_t *pokemon_array, int length, poketype_t pokemont_typ
 
 poketype_t Get_Strongest_Type(pokemon_t *pokemon_array, int length)
 {
-    int i = 1;
+    int k = 0;
     float max_strength = pokemon_array[0].strength;
-
-    while(max_strength > pokemon_array[i].strength) {
-        max_strength = pokemon_array[i].strength;
-        i++;
+    for (int i = 0; i < length; i++) {
+        if (pokemon_array[i].strength >= max_strength) {
+            max_strength = pokemon_array[i].strength;
+            return pokemon_array[i].type;
         }
-        printf("%d\n", i);
-    return pokemon_array[i].type;
+    }
 }
-float Get_Maximal_Strength(pokemon_t * pokemon_array, int length, poketype_t type)
+float Get_Maximal_Strength(pokemon_t * pokemon_array, int length, poketype_t type, int type_count)
 {
-    for(int = 0; i < length; i++) {
+    int temp_array;
+    for(int i = 0; i < length; i++) {
         if(pokemon_array[i].type == type) {
-
+            for(int k = 0; k < type_count; k++) {
+                temp_array[k]= pokemon_array[i].strength
+            }
         }
 
     }
@@ -111,7 +113,7 @@ float Get_Maximal_Strength(pokemon_t * pokemon_array, int length, poketype_t typ
 }
 int main() {
     pokemon_t pokemon_array[] = {
-        {"Pikachu", 2, 6.55, 7.56, electric},
+        {"Pikachu", 2, 9.99, 7.56, electric},
         {"Charmander", 1, 7.45, 7.88, fire},
         {"Arbok", 5, 7.58, 8.88, poison},
         {"Furret", 6, 5.33, 6.75, normal},
@@ -130,7 +132,7 @@ int main() {
     poketype_t strongest = Get_Strongest_Type(pokemon_array, length);
     printf("%d\n",strongest);
 
-    float highest = Get_Maximal_Strength(pokemon_array, length, type);
+    float highest = Get_Maximal_Strength(pokemon_array, length, type, type_count);
     printf("%f", highest);
 
     return 0;
