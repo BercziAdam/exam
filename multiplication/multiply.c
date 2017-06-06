@@ -18,8 +18,25 @@
  *
  * Non-positive base numbers should be treated as errors, handle it!
  */
-
+void Multiplication(int base_num)
+{
+    if(base_num <= 0)
+        printf("Non-positive base number please enter a new one!\n");
+    else {
+        for(int i = 1; i <= 10; i++) {
+            printf("%d * %d = %d\n", i, base_num, i*base_num);
+        }
+    }
+}
 int main() {
 
-  return 0;
+    while(1) {
+        int base_number;
+
+        printf("Please enter a base number for multiplication table!\n");
+        scanf(" %d", &base_number);
+
+        Multiplication(base_number);
+    }
+    return 0;
 }
